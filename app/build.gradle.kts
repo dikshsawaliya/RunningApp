@@ -2,11 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+    id("com.google.devtools.ksp") version "1.9.20-1.0.14"
+//    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.diksh.runningapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.diksh.runningapp"
@@ -80,6 +82,12 @@ dependencies {
     implementation(libs.dagger.android)
     implementation(libs.dagger.android.support)
     kapt(libs.dagger.android.processor)
+
+    implementation (libs.androidx.core.ktx.v1120)
+    implementation (libs.androidx.core)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
 
     // Easy Permissions
     implementation(libs.easypermissions)

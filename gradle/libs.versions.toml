@@ -1,9 +1,11 @@
 [versions]
-agp = "8.5.2"
+agp = "8.6.0"
+coreKtxVersion = "1.12.0"
 dagger = "2.28.3"
 daggerAndroidSupport = "2.28.1"
 easypermissions = "3.0.0"
 glide = "4.11.0"
+hiltAndroid = "2.56.2"
 kotlin = "1.9.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -24,7 +26,9 @@ roomRuntime = "2.7.1"
 timber = "4.7.1"
 
 [libraries]
+androidx-core = { module = "androidx.core:core", version.ref = "coreKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v1120 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
@@ -40,6 +44,8 @@ dagger-android-support = { module = "com.google.dagger:dagger-android-support", 
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerAndroidSupport" }
 easypermissions = { module = "pub.devrel:easypermissions", version.ref = "easypermissions" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
